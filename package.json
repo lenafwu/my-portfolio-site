@@ -1,6 +1,8 @@
 {
   "name": "my-portfolio-site",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "My personal portfolio site",
+  "author": "Fengting Wu <fwu27@my.centennialcollege.ca>",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
@@ -12,5 +14,6 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1"
-  }
+  },
+  "license": "MIT"
 }

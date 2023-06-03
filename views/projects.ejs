@@ -1,0 +1,18 @@
+<%- include('partials/header') %>
+<body>
+  <div class="container">
+    <p><%= title %></p>
+    <% for(let project of projects) { %>
+    <h3><%=project.name%></h3>
+    <p><%=project.description%></p>
+    <a href="<%=project.link%>" target="_blank">View</a>
+    <% } %>
+  </div>
+  <div>
+    <a href="/" class="btn">
+      <span>Back to Home</span>
+    </a>
+  </div>
+</body>
+
+<%- include('partials/footer') %>
