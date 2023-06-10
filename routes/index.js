@@ -7,32 +7,18 @@ router.get("/", function (req, res, next) {
 });
 
 router.get("/about", function (req, res, next) {
-  res.render("index", { title: "About" });
+  res.render("about", { title: "About Me" });
 });
 
 router.get("/project", function (req, res, next) {
-  res.render("projects", projects);
+  res.render("project", { title: "My Projects" });
 });
 
-const projects = {
-  title: "Projects",
-  projects: [
-    {
-      name: "Project 1",
-      description: "This is the first project",
-      link: "www.example.com",
-    },
-    {
-      name: "Project 2",
-      description: "This is the second project",
-      link: "www.example.com",
-    },
-    {
-      name: "Project 3",
-      description: "This is the third project",
-      link: "www.example.com",
-    },
-  ],
-};
+router.get("/service", function (req, res, next) {
+  res.render("service", { title: "Services" });
+});
 
+router.get("/contact", function (req, res, next) {
+  res.render("contact", { title: "Contact Me" });
+});
 module.exports = router;

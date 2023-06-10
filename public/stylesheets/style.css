@@ -1,3 +1,10 @@
+/* Color variables */
+:root {
+  --primary-color: #8e44ad;
+  --secondary-color: #d7bde2;
+  --text-color: #333;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -6,26 +13,150 @@
   text-decoration: none;
 }
 
+/* .. Main Body ... */
+
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
 }
 
-header {
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100vh - 60px);
+}
+
+/* ... Main Section ... */
+
+.main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 10%;
+}
+
+.description {
+  width: 60%;
+  margin-right: 20px;
+}
+
+/* ... Image Section ... */
+
+.image {
+  width: 40%;
+  text-align: right;
+  margin-left: 20px;
+}
+
+.image img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+/* ... Header Section ... */
+
+header {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10%;
+}
+
+/* ... Footer Section ... */
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.header {
+  background-color: var(--primary-color);
+  padding: 10px;
 }
 
 .logo {
   cursor: pointer;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--secondary-color);
+}
+
+.logo img {
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
 .navbar li {
   display: inline-block;
-  padding: 0px 20px;
+  padding: 10px 20px;
 }
 
 .navbar li a {
-  transition: all 0.3s ease 0s;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: block; /* so the link take up entire space, otherwise only text is hightlighted */
+}
+
+.navbar li:hover {
+  background-color: var(--secondary-color);
+  border-radius: 4px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+h1 span {
+  color: var(--primary-color);
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #8e44ad;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #673ab7;
 }

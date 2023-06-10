@@ -1,0 +1,33 @@
+/* ... existing CSS ... */
+
+.about-me {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-me .image {
+  flex: 1;
+  text-align: center;
+  padding-right: 2em;
+}
+
+.about-me .image img {
+  max-width: 60%; /* made the image smaller */
+  border-radius: 50%; /* rounded the image */
+}
+
+.about-me .about-me-introduction {
+  flex: 2;
+  padding-left: 2em; /* added more space */
+}
+
+.about-me .about-me-introduction h1 {
+  font-size: 36px;
+  margin-bottom: 30px; /* added more space */
+}
+
+.about;

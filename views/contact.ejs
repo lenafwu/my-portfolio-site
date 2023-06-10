@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fengting Wu's Website</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/form.css" />
+  </head>
+  <body>
+    <header><%- include('partials/header'); %></header>
+    <p><%= title %></p>
+    <!-- contact.ejs -->
+    <div class="container">
+      <div class="form-card">
+        <form method="GET" action="/">
+          <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit">Send</button>
+          </div>
+        </form>
+      </div>
+      <div class="info-card">
+        <h2>Contact Me!</h2>
+        <p>Name: Fengting Wu</p>
+        <p>Email: fwu27@my.centennialcollege.ca</p>
+        <p>Phone: 647-465-8188</p>
+      </div>
+    </div>
+
+    <%- include('partials/footer'); %>
+  </body>
+</html>
