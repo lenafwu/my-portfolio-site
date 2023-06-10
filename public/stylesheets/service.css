@@ -1,0 +1,29 @@
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.service-item {
+  padding: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.service-item h2 {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 1.4em;
+}

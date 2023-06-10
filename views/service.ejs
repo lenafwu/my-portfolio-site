@@ -3,10 +3,30 @@
   <head>
     <title>Lena F. Wu's Website</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/service.css" />
   </head>
   <body>
     <header><%- include('partials/header'); %></header>
-    <p><%= title %></p>
+    <main>
+      <h1>My Services</h1>
+      <ul class="service-list">
+        <li class="service-item">
+          <h2>Web Development</h2>
+        </li>
+        <li class="service-item">
+          <h2>2D & 3D Model Design</h2>
+        </li>
+        <li class="service-item">
+          <h2>Animation</h2>
+        </li>
+        <li class="service-item">
+          <h2>Game Programming</h2>
+        </li>
+        <li class="service-item">
+          <h2>General Programming</h2>
+        </li>
+      </ul>
+    </main>
     <%- include('partials/footer'); %>
   </body>
 </html>
