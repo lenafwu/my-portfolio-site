@@ -3,60 +3,68 @@
   <head>
     <title>Lena F. Wu's Website</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/project.css" />
   </head>
   <body>
     <header><%- include('partials/header'); %></header>
+
     <main>
       <div class="project-card">
         <img src="/images/blender-project-picture.png" alt="project 1" />
-        <h2>3D Model of Game Character - class project</h2>
-        <p>
-          This final project is mainly an attempt to apply the various Blender
-          technics learnt to build cartoon-style 3D models, with reference of
-          real world figures and hand-drew sketches, as natural, detailed and
-          good-looking as possible. Several animations were designed for the
-          humanoid characters. Simple environment objects are also added as
-          required. Unity project was created with basic set up of movement as a
-          showcase stage for the models. The final result is interesting and
-          promising and countless valuable experiences are gained during this
-          journey 😊
-        </p>
-        <a
-          href="https://github.com/lenafwu/comp253-assets-for-game-developers-final-project"
-          class="link"
-          >GitHub link</a
-        >
+        <div class="project-description">
+          <h2>3D Model of Game Character - class project</h2>
+          <p>
+            This final project is mainly an attempt to apply the various Blender
+            technics learnt to build cartoon-style 3D models, with reference of
+            real world figures and hand-drew sketches, as natural, detailed and
+            good-looking as possible. Several animations were designed for the
+            humanoid characters. Simple environment objects are also added as
+            required. Unity project was created with basic set up of movement as
+            a showcase stage for the models. The final result is interesting and
+            promising and countless valuable experiences are gained during this
+            journey 😊
+          </p>
+          <a
+            href="https://github.com/lenafwu/comp253-assets-for-game-developers-final-project"
+            class="link"
+            >GitHub link</a
+          >
+        </div>
       </div>
       <div class="project-card">
         <img
           src="/images/delivery-tracker-project-picture.png"
           alt="project 2"
         />
-        <h2>Delivery Tracker</h2>
-        <p>
-          This is a web application to track the time, income, expenses for a
-          food delivery driver. It is built with Node.js, Express, MongoDB and
-          hosted on Replit. It is a practice project for me to learn and mainly
-          focused on the back-end. Project is kept private as no authentication
-          is set up yet. I'm planning to write front-end using React.js in the
-          future.
-        </p>
-        <a href="https://github.com/lenafwu/delivery-tracker" class="link"
-          >GitHub Link</a
-        >
+        <div class="project-description">
+          <h2>Delivery Tracker</h2>
+          <p>
+            This is a web application to track the time, income, expenses for a
+            food delivery driver. It is built with Node.js, Express, MongoDB and
+            hosted on Replit. It is a practice project for me to learn and
+            mainly focused on the back-end. Project is kept private as no
+            authentication is set up yet. I'm planning to write front-end using
+            React.js in the future.
+          </p>
+          <a href="https://github.com/lenafwu/delivery-tracker" class="link"
+            >GitHub Link</a
+          >
+        </div>
       </div>
       <div class="project-card">
         <img src="images/monster-escape-project-picture.png" alt="project 3" />
-        <h2>Monster Escape - Unity Game class project</h2>
-        <p>
-          My fist Unity project for Intro to Game & Simulation class. A
-          functional 3D game with game character, physical interaction,
-          animation, sound effect, and simple ememy AI. The game is built with
-          Unity and C#.
-        </p>
-        <a href="https://github.com/lenafwu/comp391-game-project" class="link"
-          >GitHub Link</a
-        >
+        <div class="project-description">
+          <h2>Monster Escape - Unity Game class project</h2>
+          <p>
+            My fist Unity project for Intro to Game & Simulation class. A
+            functional 3D game with game character, physical interaction,
+            animation, sound effect, and simple enemy AI. The game is built with
+            Unity and C#.
+          </p>
+          <a href="https://github.com/lenafwu/comp391-game-project" class="link"
+            >GitHub Link</a
+          >
+        </div>
       </div>
     </main>
     <%- include('partials/footer'); %>
