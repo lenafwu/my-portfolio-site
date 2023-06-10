@@ -1,5 +1,3 @@
-/* ... existing CSS ... */
-
 .about-me {
   display: flex;
   justify-content: space-between;
@@ -16,16 +14,16 @@
 }
 
 .about-me .image img {
-  max-width: 60%; /* made the image smaller */
-  border-radius: 50%; /* rounded the image */
+  max-width: 60%;
+  border-radius: 50%;
 }
 
 .about-me .about-me-introduction {
   flex: 2;
-  padding-left: 2em; /* added more space */
+  padding-left: 2em;
 }
 
 .about-me .about-me-introduction h1 {
   font-size: 36px;
-  margin-bottom: 30px; /* added more space */
+  margin-bottom: 30px;
 }

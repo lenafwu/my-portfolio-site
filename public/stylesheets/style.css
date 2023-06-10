@@ -1,7 +1,9 @@
 /* Color variables */
+
 :root {
   --primary-color: #8e44ad;
   --secondary-color: #d7bde2;
+  --darkend-color: #673ab7;
   --text-color: #333;
 }
 
@@ -13,7 +15,7 @@
   text-decoration: none;
 }
 
-/* .. Main Body ... */
+/* Main Body  */
 
 body {
   margin: 0;
@@ -28,7 +30,7 @@ body {
   min-height: calc(100vh - 60px);
 }
 
-/* ... Main Section ... */
+/* Main Section */
 
 .main {
   max-width: 1000px;
@@ -44,7 +46,7 @@ body {
   margin-right: 20px;
 }
 
-/* ... Image Section ... */
+/* Image Section */
 
 .image {
   width: 40%;
@@ -57,7 +59,7 @@ body {
   border-radius: 50%;
 }
 
-/* ... Header Section ... */
+/* Header Section */
 
 header {
   background-color: var(--primary-color);
@@ -67,7 +69,7 @@ header {
   padding: 10px 10%;
 }
 
-/* ... Footer Section ... */
+/*  Footer Section  */
 
 footer {
   background-color: var(--primary-color);
@@ -123,12 +125,13 @@ footer p {
   color: white;
   text-decoration: none;
   transition: all 0.3s ease;
-  display: block; /* so the link take up entire space, otherwise only text is hightlighted */
+  display: block;
 }
 
 .navbar li:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--darkend-color);
   border-radius: 4px;
+  cursor: pointer;
 }
 
 h1 {
@@ -149,7 +152,7 @@ p {
 .button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #8e44ad;
+  background-color: var(--primary-color);
   color: #fff;
   text-decoration: none;
   font-size: 16px;
@@ -158,5 +161,5 @@ p {
 }
 
 .button:hover {
-  background-color: #673ab7;
+  background-color: var(--darkend-color);
 }
