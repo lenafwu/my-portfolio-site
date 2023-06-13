@@ -116,6 +116,8 @@ footer p {
   margin-left: 5px;
 }
 
+/* Navigation Bar */
+
 .navbar {
   list-style-type: none;
   margin: 0;
@@ -126,6 +128,7 @@ footer p {
 .navbar li {
   display: inline-block;
   padding: 10px 20px;
+  position: relative;
 }
 
 .navbar li a {
@@ -139,6 +142,26 @@ footer p {
   background-color: var(--darkend-color);
   border-radius: 4px;
   cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* Position below the li */
+  left: 0;
+  min-width: 100%;
+  background-color: var(--darkend-color);
+  border-radius: 4px;
+}
+
+.dropdown-content a {
+  color: white; /* Same as navbar links */
+  padding: 15px 5px; /* Same as navbar links */
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 h1 {
