@@ -150,14 +150,15 @@ footer p {
   top: 100%; /* Position below the li */
   left: 0;
   min-width: 100%;
-  background-color: var(--darkend-color);
+  /* background-color: var(--darkend-color);*/
   border-radius: 4px;
 }
 
 .dropdown-content a {
-  color: white; /* Same as navbar links */
+  color: blue !important; /* otherwise it is somehow still white*/
   padding: 15px 5px; /* Same as navbar links */
   display: block;
+  text-decoration: underline !important;
 }
 
 .dropdown:hover .dropdown-content {
