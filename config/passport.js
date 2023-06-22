@@ -5,9 +5,14 @@ module.exports = function () {
   passport.serializeUser(function (user, done) {
     done(null, user.id);
   });
-  passport.deserializeUser(function (id, done) {
-    userModel.findById(id, function (err, user) {
-      done(err, user);
-    });
+  passport.deserializeUser(async (id, done) => {
+    try {
+      const user = await userModel.findOne({ _id: id }, "-password -salt");
+      return done(null, user);
+    } catch (error) {
+      done(error);
+    }
   });
+
+  require("./local")();
 };

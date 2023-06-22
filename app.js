@@ -13,7 +13,6 @@ const { connectDB } = require("./config/database");
 const configurePassport = require("./config/passport");
 const session = require("express-session");
 
-
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");

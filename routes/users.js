@@ -1,19 +1,16 @@
 var express = require("express");
 var router = express.Router();
 const userController = require("../controllers/userController");
+const passport = require("passport");
 
-/* GET users listing. */
-router.get("/", function (req, res, next) {
-  res.send("respond with a resource");
-});
+// routes for sign up
+router.get("/signup", userController.renderSignup);
 
-router.get("/signup", function (req, res, next) {
-  res.render("signup", { title: "Sign Up" });
-});
+router.post("/signup", userController.signup);
 
-router.post("/login", userController.requireAuth, userController.signin);
+// routes for log in
+router.get("/login", userController.renderLogin);
 
-router.get("/login", function (req, res, next) {
-  res.render("login", { title: "Log In" });
-});
+router.post("/login", userController.login);
+
 module.exports = router;
