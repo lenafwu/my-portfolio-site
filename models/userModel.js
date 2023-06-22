@@ -1,4 +1,5 @@
 // this file defines the user model
+
 const mongoose = require("mongoose");
 const crypto = require("crypto");
 
@@ -54,7 +55,8 @@ userSchema.methods.hashPassword = function (password) {
     .toString("base64");
 };
 
-// check if password is valid
+// generate salt before user is saved
+// * Pre middleware functions are executed one after another, when each middleware calls next
 userSchema.pre("save", function (next) {
   if (this.password) {
     this.salt = crypto.randomBytes(16).toString("base64");
@@ -68,4 +70,4 @@ userSchema.methods.authenticate = function (password) {
   return this.password === this.hashPassword(password);
 };
 
-modules.exports = mongoose.model("User", userSchema);
+module.exports = mongoose.model("User", userSchema);
