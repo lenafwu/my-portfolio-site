@@ -11,17 +11,17 @@ function requireAuth(req, res, next) {
 }
 
 // get contact list
-router.get("/list", contactController.getContactList);
+router.get("/list", requireAuth, contactController.getContactList);
 
 // edit contact detail
-router.get("/edit/:id", contactController.displayEditPage);
-router.post("/edit/:id", contactController.processEditPage);
+router.get("/edit/:id", requireAuth, contactController.displayEditPage);
+router.post("/edit/:id", requireAuth, contactController.processEditPage);
 
 // delete contact
-router.get("/delete/:id", contactController.performDelete);
+router.get("/delete/:id", requireAuth, contactController.performDelete);
 
 // get route for displaying add contact page
-router.get("/add", contactController.displayAddPage);
-router.post("/add", contactController.processAddPage);
+router.get("/add", requireAuth, contactController.displayAddPage);
+router.post("/add", requireAuth, contactController.processAddPage);
 
 module.exports = router;

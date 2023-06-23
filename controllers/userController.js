@@ -52,7 +52,7 @@ module.exports.signup = async (req, res, next) => {
   }
 };
 
-module.exports.signout = (req, res, next) => {
+module.exports.logout = (req, res, next) => {
   req.logout((err) => {
     if (err) {
       console.log(err);
@@ -67,7 +67,7 @@ module.exports.login = (req, res, next) => {
   // otherwise, redirect to login page
   passport.authenticate("local", {
     successRedirect: req.session.url || "/",
-    failureRedirect: "/user/login",
+    failureRedirect: "/users/login",
   })(req, res, next);
 
   // delete the url from session
