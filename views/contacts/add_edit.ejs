@@ -1,0 +1,55 @@
+<!-- add & edit business contact page-->
+<%- include ../partials/header.ejs %>
+<link rel="stylesheet" href="/stylesheets/form.css" />
+
+<div class="container">
+  <h1><%= contact ? 'Edit' : 'Add' %> Contact</h1>
+  <form
+    action="<%= contact ? `/contacts/edit/${contact._id}` : '/contacts/add' %>"
+    method="post"
+    class="form-card"
+  >
+    <div class="form-group">
+      <input
+        type="hidden"
+        name="id"
+        value="<%= contact ? contact._id : '' %>"
+      />
+      <label for="contactName">Name:</label>
+      <input
+        type="text"
+        id="contactName"
+        name="contactName"
+        value="<%= contact ? contact.contactName : '' %>"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="contactEmail">Email:</label>
+      <input
+        type="email"
+        id="contactEmail"
+        name="contactEmail"
+        value="<%= contact ? contact.contactEmail : '' %>"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="contactNumber">Number:</label>
+      <input
+        type="text"
+        id="contactNumber"
+        name="contactNumber"
+        value="<%= contact ? contact.contactNumber : '' %>"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <button class="button" type="submit">
+        <%= contact ? 'Update' : 'Add' %>
+      </button>
+    </div>
+  </form>
+</div>
+
+<%- include ../partials/footer.ejs %>

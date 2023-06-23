@@ -194,3 +194,44 @@ p {
 .button:hover {
   background-color: var(--darkend-color);
 }
+
+/* Contact List Page */
+
+.table-container {
+  overflow-x: auto;
+}
+
+.contact-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.contact-table thead th {
+  border-bottom: 2px solid var(--primary-color);
+  padding: 10px;
+  text-align: left;
+}
+
+.contact-table tbody td {
+  padding: 10px;
+  text-align: left;
+}
+
+.add-button {
+  background-color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+.edit-button {
+  background-color: var(--darkend-color);
+  margin-right: 10px;
+}
+
+.delete-button {
+  background-color: red;
+}
+
+.delete-form {
+  display: inline;
+}
