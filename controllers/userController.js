@@ -22,11 +22,12 @@ module.exports.renderLogin = (req, res, next) => {
 
 module.exports.renderSignup = (req, res, next) => {
   if (!req.user) {
+    /*
     // creates an empty new user object
     const newUser = new User();
 
-    // renders the signup page and passes the newUser object to it
-    res.render("signup", { title: "Sign Up", user: newUser });
+    // renders the signup page and passes the newUser object to it*/
+    res.render("signup", { title: "Sign Up" });
   } else {
     // if user is already logged in, redirect to home page
     return res.redirect("/");
