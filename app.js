@@ -5,6 +5,7 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const passport = require("passport");
+const flash = require("connect-flash");
 
 // routes
 const indexRouter = require("./routes/index");
@@ -25,6 +26,8 @@ app.use(
     secret: "sessionSecret",
   })
 );
+
+app.use(flash());
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));

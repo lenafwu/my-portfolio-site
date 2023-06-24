@@ -6,6 +6,10 @@
   <h2>Sign Up</h2>
   <p>Create your account</p>
 
+  <% if (messages) { %> <% messages.forEach(function(message) { %>
+  <div class="alert alert-danger"><%= message %></div>
+  <% }); %> <% } %>
+
   <form action="/users/signup" method="POST" class="form">
     <label for="firstName" class="form-label">First Name</label>
     <input

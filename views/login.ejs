@@ -6,6 +6,9 @@
     <form class="login-form" action="/users/login" method="post">
       <h2>Log in</h2>
       <p>Please enter your details below.</p>
+      <% if (messages) { %> <% messages.forEach(function(message) { %>
+      <div class="alert alert-danger"><%= message %></div>
+      <% }); %> <% } %>
       <label for="username">Username</label>
       <input type="text" id="username" name="username" required />
       <label for="password">Password</label>

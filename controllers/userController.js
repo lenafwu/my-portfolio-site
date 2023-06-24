@@ -6,6 +6,7 @@ const User = require("../models/userModel");
 module.exports.requireAuth = (req, res, next) => {
   if (!req.isAuthenticated()) {
     req.session.url = req.originalUrl;
+    req.flash("error", "You must be logged in to view this page");
     return res.redirect("/user/login");
   }
   next();
@@ -13,7 +14,7 @@ module.exports.requireAuth = (req, res, next) => {
 
 module.exports.renderLogin = (req, res, next) => {
   if (!req.user) {
-    res.render("login", { title: "Log In" });
+    res.render("login", { title: "Log In", messages: req.flash("error") });
   } else {
     console.log(req.user);
     return res.redirect("/");
@@ -27,7 +28,7 @@ module.exports.renderSignup = (req, res, next) => {
     const newUser = new User();
 
     // renders the signup page and passes the newUser object to it*/
-    res.render("signup", { title: "Sign Up" });
+    res.render("signup", { title: "Sign Up", messages: req.flash("error") });
   } else {
     // if user is already logged in, redirect to home page
     return res.redirect("/");
@@ -45,10 +46,11 @@ module.exports.signup = async (req, res, next) => {
         return res.redirect("/");
       });
     } catch (error) {
-      console.log(error);
+      req.flash("error", "Error creating user account");
       return res.render("signup", { title: "Sign Up", user: user });
     }
   } else {
+    req.flash("error", "Passwords do not match");
     return res.redirect("/");
   }
 };
@@ -57,6 +59,7 @@ module.exports.logout = (req, res, next) => {
   req.logout((err) => {
     if (err) {
       console.log(err);
+      req.flash("error", "Error logging out");
       return next(err);
     }
     return res.redirect("/");
@@ -69,6 +72,7 @@ module.exports.login = (req, res, next) => {
   passport.authenticate("local", {
     successRedirect: req.session.url || "/",
     failureRedirect: "/users/login",
+    failureFlash: "Invalid credentials",
   })(req, res, next);
 
   // delete the url from session
