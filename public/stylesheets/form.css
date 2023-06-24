@@ -8,10 +8,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  height: calc(100vh - 200px);
+
   margin-top: 10px;
 }
+
+/* For add_edit.ejs */
+
+.column {
+  flex-direction: column;
+  height: calc(100vh - 200px);
+}
+
+/* end */
 
 .content {
   display: flex;
