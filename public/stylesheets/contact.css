@@ -1,0 +1,45 @@
+/* Contact List Page */
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.table-container {
+  overflow-x: auto;
+  padding: 30px;
+}
+
+.contact-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.contact-table thead th {
+  border-bottom: 2px solid var(--primary-color);
+  padding: 10px;
+  text-align: left;
+}
+
+.contact-table tbody td {
+  padding: 10px;
+  text-align: left;
+}
+
+.add-button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  align-self: flex-start;
+}
+
+.button {
+  background-color: var(--primary-color);
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+}

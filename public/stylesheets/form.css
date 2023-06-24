@@ -8,6 +8,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  height: calc(100vh - 200px);
   margin-top: 10px;
 }
 

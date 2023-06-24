@@ -1,82 +1,67 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Lena F. Wu's Website</title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-    <link rel="stylesheet" href="/stylesheets/login.css" />
-  </head>
-  <body>
-    <header><%- include('partials/header'); %></header>
+<%- include('partials/header'); %>
+<link rel="stylesheet" href="/stylesheets/login.css" />
 
-    <!-- Sign Up form -->
-    <div class="login-form">
-      <h2>Sign Up</h2>
-      <p>Create your account</p>
+<!-- Sign Up form -->
+<div class="login-form">
+  <h2>Sign Up</h2>
+  <p>Create your account</p>
 
-      <form action="/users/signup" method="POST" class="form">
-        <label for="firstName" class="form-label">First Name</label>
-        <input
-          type="text"
-          id="firstName"
-          name="firstName"
-          class="form-input"
-          required
-        />
+  <form action="/users/signup" method="POST" class="form">
+    <label for="firstName" class="form-label">First Name</label>
+    <input
+      type="text"
+      id="firstName"
+      name="firstName"
+      class="form-input"
+      required
+    />
 
-        <label for="lastName" class="form-label">Last Name</label>
-        <input
-          type="text"
-          id="lastName"
-          name="lastName"
-          class="form-input"
-          required
-        />
+    <label for="lastName" class="form-label">Last Name</label>
+    <input
+      type="text"
+      id="lastName"
+      name="lastName"
+      class="form-input"
+      required
+    />
 
-        <label for="username" class="form-label">Username</label>
-        <input
-          type="text"
-          id="username"
-          name="username"
-          class="form-input"
-          required
-        />
+    <label for="username" class="form-label">Username</label>
+    <input
+      type="text"
+      id="username"
+      name="username"
+      class="form-input"
+      required
+    />
 
-        <label for="email" class="form-label">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          class="form-input"
-          required
-        />
+    <label for="email" class="form-label">Email</label>
+    <input type="email" id="email" name="email" class="form-input" required />
 
-        <label for="password" class="form-label">Password</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          class="form-input"
-          required
-        />
+    <label for="password" class="form-label">Password</label>
+    <input
+      type="password"
+      id="password"
+      name="password"
+      class="form-input"
+      required
+    />
 
-        <label for="confirmPassword" class="form-label">Confirm Password</label>
-        <input
-          type="password"
-          id="confirmPassword"
-          name="confirmPassword"
-          class="form-input"
-          required
-        />
+    <label for="confirmPassword" class="form-label">Confirm Password</label>
+    <input
+      type="password"
+      id="confirmPassword"
+      name="confirmPassword"
+      class="form-input"
+      required
+    />
 
-        <button type="submit" class="form-button">Sign Up</button>
-      </form>
+    <button type="submit" class="form-button">Sign Up</button>
+  </form>
 
-      <p class="form-footer">
-        Already have an account? <a href="/users/login">Login here</a>
-      </p>
-    </div>
+  <p class="form-footer">
+    Already have an account? <a href="/users/login">Login here</a>
+  </p>
+</div>
 
-    <!-- Sign up form ended -->
-    <%- include('partials/footer'); %>
-  </body>
-</html>
+<!-- Sign up form ended -->
+<%- include('partials/footer'); %>
