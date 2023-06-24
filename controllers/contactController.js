@@ -4,7 +4,8 @@ const ContactModel = require("../models/contactModel");
 
 module.exports.getContactList = async (req, res, next) => {
   try {
-    const contacts = await ContactModel.find();
+    // sort contact name alphabetically
+    const contacts = await ContactModel.find().sort({ contactName: 1 });
     res.render("contacts/list", {
       title: "Contact List",
       contacts: contacts,
